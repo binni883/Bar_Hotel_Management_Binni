@@ -1,0 +1,58 @@
+﻿@model Bar_Hotel_Management_Binni.Models.Wine
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Wine</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Name" class="control-label"></label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SmallPeg" class="control-label"></label>
+                <input asp-for="SmallPeg" class="form-control" />
+                <span asp-validation-for="SmallPeg" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="LargePeg" class="control-label"></label>
+                <input asp-for="LargePeg" class="form-control" />
+                <span asp-validation-for="LargePeg" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Unit" class="control-label"></label>
+                <input asp-for="Unit" class="form-control" />
+                <span asp-validation-for="Unit" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SmallPegQuantity" class="control-label"></label>
+                <input asp-for="SmallPegQuantity" class="form-control" />
+                <span asp-validation-for="SmallPegQuantity" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="LargePegQuantity" class="control-label"></label>
+                <input asp-for="LargePegQuantity" class="form-control" />
+                <span asp-validation-for="LargePegQuantity" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
